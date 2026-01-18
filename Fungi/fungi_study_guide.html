@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOL 8470 Unit 1 Chapter 24: Comprehensive Study Guide on Fungi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c5f2d;
+            border-bottom: 4px solid #97bf0d;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #2c5f2d;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #1b5e20;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #2e7d32;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 2px solid #ddd;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .key-term {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        
+        .species {
+            font-style: italic;
+            color: #1976d2;
+        }
+        
+        .diagram {
+            margin: 30px 0;
+            text-align: center;
+            padding: 20px;
+            background: #fafafa;
+            border: 2px dashed #1976d2;
+            border-radius: 8px;
+        }
+        
+        .diagram-caption {
+            font-weight: bold;
+            color: #1976d2;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        .image-placeholder {
+            background: #e3f2fd;
+            padding: 40px;
+            border: 3px dashed #2196f3;
+            text-align: center;
+            color: #1976d2;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .note-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        th {
+            background: #4caf50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .stage-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .stage-box h4 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+
+
+
+
+/* Lightbox Modal Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.5)}
+    to {transform: scale(1)}
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #f44336;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+    background: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.diagram img {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.diagram img:hover {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BIOL 8470 Unit 1 Chapter 24: Comprehensive Study Guide on Fungi</h1>
+        
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li>Introduction to Fungi</li>
+                <li>Major Fungal Groups (Phylogenetic Classification)</li>
+                <li>Fungal Cell Structure and Morphology</li>
+                <li>Fungal Reproduction</li>
+                <li>Detailed Group Analysis</li>
+                <li>Medical, Ecological, and Economic Importance</li>
+                <li>Important Notes on Fungal Classification</li>
+                <li>Key Concepts Summary</li>
+            </ol>
+        </div>
+
+        <h2>1. INTRODUCTION TO FUNGI</h2>
+        
+        <h3>Key Terminology</h3>
+        <ul>
+            <li><span class="key-term">Mycology</span>: The study of fungi</li>
+            <li><span class="key-term">Mycologists</span>: Scientists who study fungi</li>
+            <li><span class="key-term">Mycosis</span>: Disease caused by fungi</li>
+            <li><span class="key-term">Mycotoxicology</span>: Study of fungal toxins and their effects</li>
+            <li><span class="key-term">Mycota/Mycetes</span>: Terms used to describe fungal groups (interchangeable)</li>
+            <li><span class="key-term">Mycelium</span>: The thread-like structures that form the fungal body</li>
+        </ul>
+
+        <h3>General Characteristics</h3>
+        <ul>
+            <li><span class="key-term">Eukaryotic organisms</span>: Contain membrane-bound organelles (unlike bacteria)</li>
+            <li><span class="key-term">Cell wall composition</span>: Made of <span class="key-term">chitin</span> (polymer of N-acetylglucosamine) and β-1,3 and β-1,6 glucans</li>
+            <li><span class="key-term">Cell membrane</span>: Contains <span class="key-term">ergosterol</span> (not cholesterol like animals) - important drug target</li>
+            <li><span class="key-term">Nutrition</span>: Osmotrophic - absorb nutrients through entire surface</li>
+            <li><span class="key-term">Storage carbohydrate</span>: Glycogen (like animals, not starch)</li>
+            <li><span class="key-term">Distribution</span>: Terrestrial organisms with global distribution</li>
+            <li><span class="key-term">Diversity</span>: 2-5 million estimated species; ~5,000+ are pathogenic</li>
+        </ul>
+
+        <h2>2. MAJOR FUNGAL GROUPS</h2>
+        
+        <h3>Group 1: ZOOSPORIC FUNGI</h3>
+        
+        <h4>A. Microsporidia</h4>
+        <div class="note-box">
+            <strong>Characteristics:</strong>
+            <ul>
+                <li>Obligate intracellular parasites</li>
+                <li>No free-living forms</li>
+                <li>Lack mitochondria, peroxisomes, centrioles</li>
+                <li>Polar tube for host penetration</li>
+                <li>Reduced genome size</li>
+            </ul>
+        </div>
+
+        <h4>B. Chytridiomycota</h4>
+        <div class="warning-box">
+            <h4>⚠️ AMPHIBIAN CRISIS</h4>
+            <ul>
+                <li>Causes skin thickening (hyperkeratinization)</li>
+                <li>Impedes gas exchange through skin</li>
+                <li>Blood electrolyte imbalance → cardiac arrest → death</li>
+                <li>Threatening global amphibian extinction</li>
+            </ul>
+        </div>
+
+        <h3>Group 2: ZYGOMYCOTA</h3>
+        
+        <h4>A. Mucormycota - <span class="species">Rhizopus stolonifer</span></h4>
+        
+        <p><strong>Structure:</strong></p>
+        <ul>
+            <li><span class="key-term">Rhizoids</span>: Absorb nutrients from substrate</li>
+            <li><span class="key-term">Stolon</span>: Horizontal hyphae</li>
+            <li><span class="key-term">Sporangiophore</span>: Stalk supporting sporangium</li>
+            <li><span class="key-term">Sporangium</span>: Sac containing spores</li>
+        </ul>
+
+        <div class="diagram">
+            <div class="image-placeholder">
+                <img src="/Users/brian/Desktop/Clemson/Microbiology/Fungi/assets/Rhizopus_life_cycle.png" alt="Rhizopus life cycle" style="max-width:100%">
+            </div>
+            <div class="diagram-caption">Image 3: Rhizopus Life Cycle - Zygomycota</div>
+        </div>
+
+        <div class="stage-box">
+            <h4>ASEXUAL REPRODUCTION (Top of Image 3):</h4>
+            <ol>
+                <li>Spores germinate on substrate (bread)</li>
+                <li>Rhizoids penetrate and absorb nutrients</li>
+                <li>Stolons grow horizontally</li>
+                <li>Sporangiophores grow vertically</li>
+                <li>Sporangium forms at tip containing haploid spores (n)</li>
+                <li>Sporangium bursts, releasing spores</li>
+                <li>Cycle repeats</li>
+            </ol>
+        </div>
+
+        <div class="stage-box">
+            <h4>SEXUAL REPRODUCTION (Bottom of Image 3 - Unfavorable conditions):</h4>
+            <ol>
+                <li><span class="key-term">PLASMOGAMY</span>: (+) and (-) mating strains meet via pheromones</li>
+                <li>Hyphae fuse, cytoplasm combines</li>
+                <li><span class="key-term">Gametangia</span> form - thick-walled structures</li>
+                <li><span class="key-term">Dikaryotic stage (n+n)</span>: Two nuclei remain separate</li>
+                <li><span class="key-term">KARYOGAMY</span>: Nuclear fusion → zygosporangium (2n)</li>
+                <li><span class="key-term">Zygospore</span> forms - resistant to adverse conditions</li>
+                <li><span class="key-term">MEIOSIS</span>: When favorable, reduction division occurs</li>
+                <li>Haploid spores (n) released, germinate into new thallus</li>
+            </ol>
+        </div>
+
+        <p><strong>Commercial Importance:</strong></p>
+        <ul>
+            <li>Tempeh production (fermented soybeans)</li>
+            <li>Sufu curd (fermented tofu)</li>
+            <li>Produces alcohols, meat tenderizers</li>
+            <li>Yellow coloring for margarine</li>
+        </ul>
+
+        <h4>B. Glomeromycotina (Mycorrhizae)</h4>
+        <ul>
+            <li>Form arbuscular endomycorrhizae with vascular plants</li>
+            <li>Mutualistic: fungus provides nutrients, plant provides carbohydrates</li>
+            <li>Essential for plant survival</li>
+            <li>Appressoria penetrate plant roots</li>
+        </ul>
+
+        <h3>Group 3: DIKARYA</h3>
+        
+        <p>Named for <span class="key-term">dikaryotic stage</span> where two nuclei (n+n) remain separate after cytoplasmic fusion.</p>
+
+        <div class="success-box">
+            <strong>Key Feature:</strong> Cell membranes contain <span class="key-term">ergosterol</span> (not cholesterol) - excellent antifungal drug target!
+        </div>
+
+        <div class="diagram">
+            <div class="image-placeholder">
+                <img src="/Users/brian/Desktop/Clemson/Microbiology/Fungi/assets/Fungal_life_cycle.png" alt="general life cycle" style="max-width:100%">
+            </div>
+            <div class="diagram-caption">Image 4: General Fungal Sexual Reproduction Cycle</div>
+        </div>
+
+        <h4>COMPLETE SEXUAL REPRODUCTION CYCLE (Image 4):</h4>
+
+        <div class="stage-box">
+            <h4>Stage 1: HAPLOID STAGE (n) - Green section (LARGEST)</h4>
+            <ul>
+                <li>Dominant stage - most time spent here</li>
+                <li>Single set of chromosomes</li>
+                <li>Asexual reproduction via mitosis and spores</li>
+                <li>Vegetative growth</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 2: CYTOPLASMIC FUSION (Plasmogamy)</h4>
+            <ul>
+                <li>Two compatible haploid cells meet</li>
+                <li>Cytoplasm fuses</li>
+                <li><strong>Nuclei do NOT fuse yet!</strong></li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 3: DIKARYOTIC STAGE (n+n) - Pink section</h4>
+            <ul>
+                <li><strong>UNIQUE TO FUNGI</strong></li>
+                <li>Two separate haploid nuclei in same cell</li>
+                <li>Can persist for hours, days, or weeks</li>
+                <li>Critical for fungal life cycle</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 4: NUCLEAR FUSION (Karyogamy) - Yellow oval</h4>
+            <ul>
+                <li>Nuclei finally fuse: n + n → 2n</li>
+                <li>Forms true diploid zygote</li>
+                <li>Occurs in specific structures (ascus, basidium, zygosporangium)</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 5: DIPLOID STAGE (2n) - Blue section (SMALLEST)</h4>
+            <ul>
+                <li>Shortest stage in most fungi</li>
+                <li>Two complete chromosome sets</li>
+                <li>Quickly proceeds to meiosis</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 6: MEIOSIS - Yellow oval</h4>
+            <ul>
+                <li>Meiosis I: 2n → n (reduction division - 2 haploid nuclei)</li>
+                <li>Meiosis II: n → n (mitotic division - 4 haploid nuclei)</li>
+                <li>Sometimes additional mitosis → 8-12 spores</li>
+                <li>Results in haploid spores</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 7: RETURN TO HAPLOID</h4>
+            <ul>
+                <li>Spores germinate</li>
+                <li>New haploid organism grows</li>
+                <li>Cycle begins again</li>
+            </ul>
+        </div>
+
+        <div class="note-box">
+            <strong>Key Insight:</strong> Fungi are <span class="key-term">haploid-dominant</span> (most time as n). Animals are diploid-dominant (most time as 2n). The dikaryotic stage is a unique fungal adaptation!
+        </div>
+
+        <h3>A. ASCOMYCOTA (Sac Fungi)</h3>
+        
+        <p>Named for the <span class="key-term">ascus</span> (sac) containing ascospores. Largest fungal group.</p>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Septate hyphae (have cross-walls with pores)</li>
+            <li>Dimorphic: yeast or mycelial forms</li>
+            <li>Ascus typically contains 8 ascospores</li>
+            <li>Brightly colored (red, brown, blue, green)</li>
+        </ul>
+
+        <p><strong>Important Structures:</strong></p>
+        <ul>
+            <li><span class="key-term">Ascus</span>: Sac containing ascospores</li>
+            <li><span class="key-term">Ascocarp</span>: Cup-like fruiting body</li>
+            <li><span class="key-term">Ascogonium</span>: Female reproductive hypha</li>
+            <li><span class="key-term">Antheridium</span>: Male reproductive hypha</li>
+            <li><span class="key-term">Conidiophore</span>: Stalk bearing conidia</li>
+            <li><span class="key-term">Conidia</span>: Asexual spores in chains</li>
+        </ul>
+
+        <div class="diagram">
+            <div class="image-placeholder">
+                <img src="/Users/brian/Desktop/Clemson/Microbiology/Fungi/assets/Ascomycota_life_cycle.png" alt="ascomycota life cycle" style="max-width:100%">
+            </div>
+            <div class="diagram-caption">Image 2: Ascomycota Life Cycle</div>
+        </div>
+
+        <h4>ASEXUAL REPRODUCTION (Top right of Image 2):</h4>
+        <ol>
+            <li>Haploid (n) ascospores germinate</li>
+            <li>Developing mycelium with septate hyphae forms</li>
+            <li>Conidiophores develop (specialized aerial hyphae)</li>
+            <li>Conidia form in chains on conidiophores</li>
+            <li>Conidia = "naked spores" (not in sac)</li>
+            <li>Conidia disperse and germinate</li>
+            <li>Mitosis produces new mycelium</li>
+        </ol>
+
+        <h4>SEXUAL REPRODUCTION (Bottom of Image 2):</h4>
+        <ol>
+            <li><strong>GERMINATION</strong>: Ascospores germinate</li>
+            <li>Compatible mating strains (+ and -) grow separately</li>
+            <li>Each forms septate mycelium</li>
+            <li><strong>FERTILIZATION</strong>: Ascogonium (-) meets Antheridium (+)</li>
+            <li>Pheromone secretion attracts compatible types</li>
+            <li>Plasmogamy occurs (cytoplasmic fusion)</li>
+            <li><strong>DIKARYOTIC HYPHAE</strong>: Ascogenous hyphae grow (n+n nuclei separate)</li>
+            <li><strong>ASCOCARP FORMATION</strong>: Cup-shaped fruiting body develops</li>
+            <li>Contains dikaryotic (ascogenic) + sterile hyphae</li>
+            <li><strong>YOUNG ASCUS</strong>: Still dikaryotic (n+n), nuclei not fused</li>
+            <li><strong>KARYOGAMY</strong>: Nuclear fusion → diploid (2n) zygote</li>
+            <li><strong>MEIOSIS</strong>:
+                <ul>
+                    <li>First division: 2n → n (2 haploid nuclei)</li>
+                    <li>Second division (mitosis): n → n (4 haploid nuclei)</li>
+                    <li>Additional mitosis: 4 → 8 ascospores</li>
+                </ul>
+            </li>
+            <li><strong>MATURE ASCUS</strong>: Contains 8 haploid ascospores</li>
+            <li>Ascospores released, cycle repeats</li>
+        </ol>
+
+        <h4>Saccharomyces cerevisiae (Baker's Yeast)</h4>
+        
+        <p><strong>Yeast Form:</strong></p>
+        <ul>
+            <li>Reproduces by budding at unscarred regions</li>
+            <li>When entire surface scarred → senescence (aging) → death</li>
+        </ul>
+
+        <p><strong>Vegetative Cycle (Nutrient-rich):</strong></p>
+        <ul>
+            <li>Haploid ascospores (α or a types) germinate</li>
+            <li>Mitosis and budding produce daughter cells</li>
+            <li>Continues until surface fully scarred</li>
+        </ul>
+
+        <p><strong>Sexual Reproduction (Nutrient-poor):</strong></p>
+        <ul>
+            <li>α meets a mating types</li>
+            <li>Form diploid zygote (2n)</li>
+            <li>Can remain as diploid yeast OR form mycelium</li>
+            <li>When favorable: meiosis → ascus with 4 haploid spores (2α, 2a)</li>
+            <li>Return to vegetative cycle</li>
+        </ul>
+
+        <div class="success-box">
+            <strong>Research Importance:</strong> Model organism for eukaryotic cell biology. Almost all cell cycle control discoveries came from yeast research!
+        </div>
+
+        <h4>Important Ascomycota Species:</h4>
+
+        <p><strong>BENEFICIAL:</strong></p>
+        <ul>
+            <li><span class="species">Penicillium</span>: First antibiotic (penicillin) - changed biomedical science</li>
+            <li><span class="species">Saccharomyces</span>: Baking, wine, beer production</li>
+            <li><span class="species">Aspergillus oryzae</span>: Sake, soy sauce, miso</li>
+            <li><span class="species">Neurospora crassa</span>: Research model organism</li>
+        </ul>
+
+        <p><strong>PATHOGENIC:</strong></p>
+        <ul>
+            <li><span class="species">Aspergillus</span>: Allergies, asthma, sinusitis; fatal in immunocompromised; produces aflatoxins (carcinogenic)</li>
+            <li><span class="species">Candida albicans</span>: Ringworm, jock itch, athlete's foot, thrush, candidiasis</li>
+            <li><span class="species">Histoplasma, Blastomyces</span>: Serious subdermal infections</li>
+            <li><span class="species">Stachybotrys</span>: Black mold, "Sick Building Syndrome"</li>
+            <li><span class="species">Claviceps purpurea</span>: Ergotism ("Saint Anthony's Fire"), contains LSD, killed thousands in Middle Ages</li>
+            <li><span class="species">Fusarium</span>: Produces fumonisins (potent mycotoxins)</li>
+            <li><span class="species">Pseudogymnoascus destructans</span>: White-nose syndrome in bats, threatens extinction by 2026</li>
+        </ul>
+
+        <h3>B. BASIDIOMYCOTA (Club Fungi)</h3>
+        
+        <p>Includes mushrooms, shelf fungi, puffballs, rusts, and smuts. Named for <span class="key-term">basidium</span> (club-shaped structure).</p>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Many macroscopic (visible to naked eye)</li>
+            <li>Can be very large (1.5-2 feet diameter)</li>
+            <li>Basidium: club-shaped, typically 4 basidiospores</li>
+            <li>Basidiocarp: fruiting body (mushroom)</li>
+        </ul>
+
+        <p><strong>Mushroom Structure:</strong></p>
+        <ul>
+            <li>Cap (top)</li>
+            <li>Gills (underneath, lined with basidia)</li>
+            <li>Stipe (stalk)</li>
+            <li>Basidium: on gill surface</li>
+            <li>Sterigma: projection from basidium</li>
+            <li>Basidiospore: forms at sterigma end</li>
+        </ul>
+
+        <h4>Sexual Reproduction in Mushrooms:</h4>
+        <ol>
+            <li>Basidium contains 2 nuclei (dikaryotic, n+n)</li>
+            <li>Karyogamy: nuclei fuse → diploid (2n)</li>
+            <li>Meiosis: 2n → 4 haploid nuclei</li>
+            <li>4 basidiospores form (haploid, n)</li>
+            <li>Millions dispersed from gills</li>
+            <li>Germinate → monokaryotic mycelium (n)</li>
+            <li>Compatible strains meet and fuse</li>
+            <li>Secondary mycelium forms (dikaryotic, n+n)</li>
+            <li>Dikaryotic stage persists through basidiocarp formation</li>
+            <li>Mushroom emerges</li>
+            <li>Basidia mature in gills</li>
+            <li>Karyogamy in basidia</li>
+            <li>Cycle repeats</li>
+        </ol>
+
+        <div class="diagram">
+            <div class="image-placeholder">
+               <img src="/Users/brian/Desktop/Clemson/Microbiology/Fungi/assets/Rust_smut_life_cycle.png" alt="description" style="max-width:100%">
+            </div>
+            <div class="diagram-caption">Image 1: Basidiomycota Plant Pathogens - Rust and Smut Life Cycle</div>
+        </div>
+
+        <h4>PLANT PATHOGENS: Rusts and Smuts (Image 1)</h4>
+
+        <p>Two groups cause devastating plant diseases:</p>
+        <ul>
+            <li><span class="key-term">Uredinomycetes</span>: Rust diseases</li>
+            <li><span class="key-term">Ustilaginomycetes</span>: Smut diseases</li>
+            <li>Both are <span class="key-term">dimorphic</span>: yeast OR mycelial forms</li>
+        </ul>
+
+        <h4>COMPLETE DISEASE CYCLE (Image 1):</h4>
+
+        <div class="stage-box">
+            <h4>Stage 1: Haploid Sporidia (n) - Yeast Form</h4>
+            <ul>
+                <li>Single-celled, non-infectious</li>
+                <li>Cannot infect plants in this stage</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 2: Conjugation Tube Formation</h4>
+            <ul>
+                <li>Two compatible sporidia meet</li>
+                <li>Form conjugation tube</li>
+                <li>Cells begin to fuse</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 3: Dikaryotic Filament (n+n) - INFECTIOUS FORM</h4>
+            <ul>
+                <li>After plasmogamy</li>
+                <li>Forms filamentous dikaryotic mycelium</li>
+                <li>Two nuclei separate (n+n)</li>
+                <li><strong>This is the infectious form!</strong></li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 4: Appressorium Formation</h4>
+            <ul>
+                <li>Specialized structure on plant surface</li>
+                <li>Flattened, pad-like</li>
+                <li>Attaches firmly to plant</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 5: Plant Penetration</h4>
+            <ul>
+                <li>Appressorium penetrates plant tissue</li>
+                <li>Dikaryotic hyphae invade plant cells</li>
+                <li>Grows deep into plant</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 6: Proliferation and Branching</h4>
+            <ul>
+                <li>Extensive hyphal growth inside plant</li>
+                <li>Septate hyphae spread</li>
+                <li>Forms complex mycelial network</li>
+                <li>Absorbs nutrients from plant</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 7: Karyogamy</h4>
+            <ul>
+                <li>Nuclear fusion: n+n → 2n</li>
+                <li>Forms diploid nuclei</li>
+            </ul>
+        </div>
+
+        <div class="stage-box">
+            <h4>Stage 8: Teliospore Formation (2n)</h4>
+            <ul>
+                <li>Thick-walled diploid spores</li>
+                <li><strong>Cause visible
+
+
+<!-- Lightbox Modal for Full-Screen Images -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+    // Function to open lightbox
+    function openLightbox(imgElement) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const caption = document.getElementById('lightbox-caption');
+        
+        lightbox.classList.add('active');
+        lightboxImg.src = imgElement.src;
+        caption.innerHTML = imgElement.alt || 'Fungal Diagram';
+        
+        // Prevent body scroll when lightbox is open
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Function to close lightbox
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Add click listeners to all images once DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.diagram img');
+        images.forEach(img => {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox(this);
+            });
+        });
+    });
+    
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+</script>
